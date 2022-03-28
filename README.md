@@ -8,3 +8,10 @@ NOTE2: I have used JSON Server, which makes a fake JSON Server without any codin
 Note3: The reference I've used is provided at the bottom.
 
 REFERENCE: https://www.youtube.com/watch?v=3dHNOWTI7H8
+
+How to use: 
+1. Open two command prompts(works in VS Code)
+2. Navigate to To-Do (Using cd command)
+3. In the first prompt type "ng serve" (without quotation marks)
+4. In the second one, type npm run server to run db.json
+5. Refresh the page, task(s) should show up now
