@@ -1,0 +1,35 @@
+.submit {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: dashed 1px rgb(70, 47, 30);
+}
+
+.submit:hover {
+    border: solid 1px rgb(70, 47, 30);
+    color: chocolate;
+    background-color: rgb(24, 61, 24);
+}
+
+* {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+label {
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+
+input[type=text]{
+  width: 30%;
+  box-shadow: 1 1 13px rgb(21, 44, 31);
+  padding: 0px 0px 10px 0px;
+  border-radius: 10px;
+}

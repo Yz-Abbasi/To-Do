@@ -1,0 +1,15 @@
+<form class="add-form" (ngSubmit)="submit()">
+    <div class="form">
+        <label for="task">Task</label>
+        <input type="text" name="task" [(ngModel)]="task" id="task" placeholder="Add task here"></div>
+    <div class="form">
+        <label for="date">Date</label>
+        <input type="text" name="date" [(ngModel)]="date" id="date" placeholder="Date">
+    </div>
+    <div class="form">
+        <label for="time" title="Note:If you don't want to set an specefic time, just type in: --:--">Time</label>
+        <input type="text" name="time" [(ngModel)]="time" id="time" placeholder="HH:MM">
+    </div>
+    {{ task }}
+    <input type="submit" value="Save Task" class="submit">
+</form>

@@ -1,0 +1,13 @@
+.taskClass {
+    text-align: center;
+    border-top: solid 1px rgb(7, 71, 1);
+    align-content: flex-start;
+    justify-items: center;
+    background-color: antiquewhite;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+}
+
+.container {
+    margin: 0% 20% 0% 20%;
+}
