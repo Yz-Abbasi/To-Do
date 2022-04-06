@@ -1,0 +1,29 @@
+#git {
+    margin-top: 30px;
+    margin-left: 3px;
+}
+
+h4 {
+    font-weight: bolder;
+    display: inline-flex;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 10%;
+    color: rgb(27, 26, 26);
+}
+
+footer {
+    background-color: seagreen;
+    border-top: 1px seagreen;
+    /*border-top-left-radius: 31px;
+    border-top-right-radius: 31px;*/
+}
+
+#git {
+    opacity: 1;
+    position: relative;
+}
+
+.content {
+    opacity: 1;
+}

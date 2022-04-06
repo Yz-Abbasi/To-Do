@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter,  } from '@angular/core';
 import { Task } from 'src/app/task-interface';
+import { IAngularMyDpOptions, IMyDateModel} from 'angular-mydatepicker'
 
 @Component({
   selector: 'app-task-add',
@@ -11,11 +12,24 @@ export class TaskAddComponent implements OnInit {
   task!: string;
   date!: string;
   time!: string;
-
   constructor() { }
 
   ngOnInit(): void {
   }
+  /*
+  myDpOptions: IAngularMyDpOptions = {
+    dateRange: false,
+    dateFormat: 'dd.mm.yyyy'
+    // other options are here...
+  };
+    // optional date changed callback
+    onDateChanged(event: IMyDateModel): void {
+      // date selected
+    }*/
+    showDate() {
+      console.log(this.date);
+    }
+
   submit() {
     if(!this.task){
       alert("FILL THE TASK");

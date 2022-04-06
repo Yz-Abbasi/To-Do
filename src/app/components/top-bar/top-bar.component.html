@@ -1,4 +1,48 @@
 <div class="header">
-<h2>{{ title }}</h2>
-<app-add text="Add"></app-add>
+        <!-- Welcome Section -->
+        <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="../../../assets/mini-profile-bg-01.jpg" style="position: relative;">
+            <div class="container-fluid tm-brand-container-outer">
+              <div class="row">
+                <div class="col-12">
+                  <!-- Logo Area -->
+                  <!-- Black transparent bg -->
+                  <div class="ml-auto mr-0 tm-bg-black-transparent text-white tm-brand-container-inner">
+                    <div class="tm-brand-container text-center">
+                      <h1 class="tm-brand-name">{{ title }}</h1>
+                      <p class="tm-brand-description mb-0">by Yazdan Abbasi</p>
+                    </div>
+                  </div>
+                  <nav class="navtop">
+                    <a href="#intro">Intro</a>
+                    <a href="#navtasks">Tasks</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+      
+            <div class="tm-bg-white-transparent tm-welcome-container">
+              <div class="container-fluid">
+                <div class="row h-100">
+                  <!-- Welcome Text -->
+                  <!-- White transparent bg -->
+                  <div class="col-md-7 tm-welcome-left-col" id="intro">
+                    <div class="tm-welcome-left">
+                      <h2>{{ title }}</h2>
+                      
+                    </div>
+                  </div>
+                  <!-- Brown bg -->
+                  <div class="col-md-5">
+                    <div class="tm-welcome-right">
+                      <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
+                      <p class="mb-0">
+                        Feel free to re-distribute and use.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
 </div>

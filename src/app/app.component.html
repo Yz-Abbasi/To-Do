@@ -1,9 +1,63 @@
 <div class="header">
-<app-top-bar></app-top-bar>
-<app-tasks></app-tasks>
+  <!-- This is the beginning of live background -->
+<div class="background">  
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span></div> 
+    <!-- Live background ends here-->
+    <app-top-bar style="position: relative;"></app-top-bar>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <app-tasks id="navtasks" style="position: relative;"></app-tasks>
 </div>
-<footer>
-        <a href="https://github.com/yazdan2033" target="_blank">
-            <img src="../assets/GitHub-Transparent.png" height="24" width="24" alt="Github link" title="GitHub">
-        </a>
-</footer>
+    <app-footer></app-footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script>
+      function detectMsBrowser() {
+        using_ms_browser =
+          navigator.appName == "Microsoft Internet Explorer" ||
+          (navigator.appName == "Netscape" &&
+            navigator.appVersion.indexOf("Edge") > -1) ||
+          (navigator.appName == "Netscape" &&
+            navigator.appVersion.indexOf("Trident") > -1);
+
+        if (using_ms_browser == true) {
+          alert(
+            "Please use Chrome or Firefox for the best browsing experience!"
+          );
+        }
+      }
+      function setBrandMarginTop() {
+        var bottomContainerHeight = $(".tm-welcome-container").height();
+
+        $(".tm-brand-container-outer").css({
+          "margin-top": -bottomContainerHeight + "px"
+        });
+      }
+
+      $(function() {
+        setBrandMarginTop();
+        detectMsBrowser();
+
+        // Handle window resize event
+        $(window).resize(function() {
+          setBrandMarginTop();
+        });
+      });
+    </script>
+    <!-- This script was intended for a "scroll to top" button but it's not compatible with angular it seems
+    <script src="[./scrollTop.js]"></script>-->

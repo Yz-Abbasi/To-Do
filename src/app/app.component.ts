@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'To Do List';
   dev: string = " Yazdan Abbasi";
-
 }

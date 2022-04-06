@@ -2,14 +2,42 @@
     <div class="form">
         <label for="task">Task</label>
         <input type="text" name="task" [(ngModel)]="task" id="task" placeholder="Add task here"></div>
-    <div class="form">
-        <label for="date">Date</label>
-        <input type="text" name="date" [(ngModel)]="date" id="date" placeholder="Date">
-    </div>
+    <div class="form"></div>    
+        <label for="date">Date: </label>
+        <input type="date" name="date" [(ngModel)]="date" id="date" class="pdate" placeholder="Date"><br/><br/>
+        <span> Selected date: {{date | date}}</span>
+        <!-- Date console test
+        <button (click)="showDate()">Examine date</button>-->
     <div class="form">
         <label for="time" title="Note:If you don't want to set an specefic time, just type in: --:--">Time</label>
-        <input type="text" name="time" [(ngModel)]="time" id="time" placeholder="HH:MM">
+        <input type="time" name="time" [(ngModel)]="time" id="time" placeholder="HH:MM">
+        <i class="fas fa-calendar-alt"></i>
     </div>
-    <!--{{ task }}-->
     <input type="submit" value="Save Task" class="submit">
 </form>
+
+
+
+
+        <!--Date picker starts from here
+    
+       add the following snippet inside your template 
+        <div class="input-group">
+     input box 
+            <input class="form-control" name="mydate" placeholder="Select a date" 
+            angular-mydatepicker #dp="angular-mydatepicker" 
+            [(ngModel)]="model" [options]="myDpOptions" 
+            (dateChanged)="onDateChanged($event)"/>
+               clear date button 
+            <div class="input-group-append">
+            <button type="button" class="btn btn-secondary" *ngIf="model" (click)="dp.clearDate()">
+            <i class="fa fa-close"></i>
+            </button>
+             </div>
+              toggle calendar button 
+            <div class="input-group-append">
+            <button type="button" class="btn btn-secondary" (click)="dp.toggleCalendar()">
+            <i class="fa fa-calendar-o"></i>
+            </button>
+            </div>
+    </div></div>-->

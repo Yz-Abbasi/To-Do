@@ -25,6 +25,13 @@
 label {
   box-sizing: border-box;
   font-weight: bolder;
+  color: black;
+}
+
+span {
+  color: rgb(24, 23, 23);
+  font-size: large;
+  font-weight: bold;
 }
 
 input[type=text]{
@@ -33,3 +40,24 @@ input[type=text]{
   padding: 0px 0px 10px 0px;
   border-radius: 10px;
 }
+
+.add-form {
+  position: relative;
+}
+
+#time {
+  width: 20%;
+  border: 1px inset rgb(136, 122, 122);
+  border-radius: 11px;
+}
+
+#time:focus {
+  border: 1px lightblue solid;
+}
+
+.pdate {
+  width: 20%;
+  border: 1px inset rgb(136, 122, 122);
+  border-radius: 11px;
+}
+

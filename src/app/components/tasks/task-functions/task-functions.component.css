@@ -1,13 +1,24 @@
 .taskClass {
+    position: relative;
     text-align: center;
     border-top: solid 1px rgb(7, 71, 1);
     align-content: flex-start;
     justify-items: center;
     background-color: antiquewhite;
-    border-top-right-radius: 32px;
-    border-top-left-radius: 32px;
+    border-radius: 32px;
+    margin: 0% 2% 0% 2%;
+    /*border-top-left-radius: 32px;*/
 }
 
 .container {
+    position: relative;
     margin: 0% 20% 0% 20%;
+    display: inline;
+}
+
+fa-icon {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-left: -40px;
 }
