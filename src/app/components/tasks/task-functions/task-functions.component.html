@@ -1,12 +1,12 @@
 <!--<div class="container">-->
  <div class="taskClass">
-    <!--This is the actual task-->
+    <!--This is the task itself-->
     <h3 style="display: inline;">{{ task.task }}</h3>
     <!-- This is a custom Icon brought from font awesome package -->
     <fa-icon [ngStyle]="{'color': 'seagreen'}" [icon]="faTimes" (click)="deleteTask(task)" title="Delete"></fa-icon>
     <!-- This is the date -->
     <div class="details">
-        <h4>{{ task.date }}</h4>
-        <!-- This is the time when task should get operational -->
-    <p style="font-weight: bold;">{{ task.time }}</p></div>
+    <h4>{{ task.date | date }}<br>{{ task.date }}</h4>
+    <!-- This is the time when task should get operational -->
+    <p style="font-weight: bold;">Time: {{ task.time }}</p></div>
  </div>

@@ -143,6 +143,7 @@ a:hover {
 .navtop {
   background-color: #333;
   overflow: hidden;
+  margin-right: 50px;
 }
 
 .navtop a {
@@ -162,4 +163,9 @@ a:hover {
 .navtop a.active {
   background-color: #04AA6D;
   color: white;
+}
+
+.log {
+  padding-right: inherit;
+  width: 40%;
 }

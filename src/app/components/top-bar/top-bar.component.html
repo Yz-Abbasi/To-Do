@@ -15,17 +15,20 @@
                   <nav class="navtop">
                     <a href="#intro">Intro</a>
                     <a href="#navtasks">Tasks</a>
+                    <a routerLink="/login" class="log">Login</a>
+                    <a routerLink="/home" class="main">Sign up</a>
                   </nav>
+                  <router-outlet></router-outlet>
                 </div>
               </div>
             </div>
       
-            <div class="tm-bg-white-transparent tm-welcome-container">
+            <div class="tm-bg-white-transparent tm-welcome-container" id="intro">
               <div class="container-fluid">
                 <div class="row h-100">
                   <!-- Welcome Text -->
                   <!-- White transparent bg -->
-                  <div class="col-md-7 tm-welcome-left-col" id="intro">
+                  <div class="col-md-7 tm-welcome-left-col">
                     <div class="tm-welcome-left">
                       <h2>{{ title }}</h2>
                       

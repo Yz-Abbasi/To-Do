@@ -5,6 +5,18 @@
       "date": "2022-04-22",
       "time": "17:52",
       "id": 5
+    },
+    {
+      "task": "A Task",
+      "date": "2022-04-12",
+      "time": "11:49",
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "username": "Default",
+      "password": "Default"
     }
   ]
 }
