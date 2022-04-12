@@ -1,75 +1,9 @@
 <div class="header">
-  <!-- This is the beginning of live background -->
-<div class="background">  
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-<<<<<<< Updated upstream
-    <span></span></div>
-    <!-- Live background ends here-->
-    <app-top-bar style="position: relative;"></app-top-bar>
-=======
-    <span></span>
-    <span></span></div>
-    <!-- Live background ends here-->
-    <app-top-bar style="position: relative;"></app-top-bar>
-    <app-tasks id="navtasks" style="position: relative;"></app-tasks>
->>>>>>> Stashed changes
+    <!--<app-top-bar style="position: relative;"></app-top-bar>-->
     <!--<app-tasks id="navtasks" style="position: relative;"></app-tasks>
     -->
+    <router-outlet></router-outlet>
 </div>
-    <app-footer></app-footer>
-
-    <script src="js/jquery.min.js"></script>
-<<<<<<< Updated upstream
-    <script src="js/parallax.min.js"></script>
-    <script>
-      function detectMsBrowser() {
-        using_ms_browser =
-          navigator.appName == "Microsoft Internet Explorer" ||
-          (navigator.appName == "Netscape" &&
-            navigator.appVersion.indexOf("Edge") > -1) ||
-          (navigator.appName == "Netscape" &&
-            navigator.appVersion.indexOf("Trident") > -1);
-
-        if (using_ms_browser == true) {
-          alert(
-            "Please use Chrome or Firefox for the best browsing experience!"
-          );
-        }
-      }
-      /*function setBrandMarginTop() {
-        var bottomContainerHeight = $(".tm-welcome-container").height();
-
-        $(".tm-brand-container-outer").css({
-          "margin-top": -bottomContainerHeight + "px"
-        });
-      }
-
-      $(function() {
-        setBrandMarginTop();
-        detectMsBrowser();
-
-        // Handle window resize event
-        $(window).resize(function() {
-          setBrandMarginTop();
-        });
-      });*/
-    </script>
+  <!-- <app-footer></app-footer>-->
     <!-- This script was intended for a "scroll to top" button but it's not compatible with angular it seems
     <script src="[./scrollTop.js]"></script>-->
-=======
-    <script src="js/parallax.min.js"></script>
->>>>>>> Stashed changes

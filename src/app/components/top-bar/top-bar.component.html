@@ -1,4 +1,5 @@
-        <!-- Welcome Section -->
+    <header>
+      <!-- Welcome Section -->
         <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="../../../assets/mini-profile-bg-01.jpg" style="position: relative;">
             <div class="container-fluid tm-brand-container-outer">
               <div class="row">
@@ -14,11 +15,12 @@
                   <nav class="navtop">
                     <a routerLinkActive="active current" routerLink="/login">Login</a>
                     <a routerLinkActive="active current" routerLink="/signup">SignUp</a>
-                    <a routerLinkActive="active current" routerLink="/tasks">Tasks</a>
-                    <a routerLinkActive="active current" routerLink="/description">Description</a>
+                    <a routerLinkActive="active current" routerLink="/admin/tasks">Tasks</a>
+                    <a routerLinkActive="active current" routerLink="/admin/description">Description</a>
                   </nav>
                   <router-outlet class="outlet"></router-outlet>
                 </div>
               </div>
             </div>
           </section>
+    </header>

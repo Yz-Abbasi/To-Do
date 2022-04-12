@@ -1,82 +1,63 @@
 .submit {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  display: flex;
-align-items: center;
-padding: 6px 14px;
-border-radius: 6px;
-color: #3D3D3D;
-background: #fff;
-border: dashed 1px rgb(70, 47, 30);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: dashed 1px rgb(70, 47, 30);
 }
 
 .submit:hover {
-<<<<<<< Updated upstream
     border: solid 1px rgb(70, 47, 30);
     color: rgb(221, 214, 209);
     background-color: rgb(30, 78, 30);
-=======
-  border: solid 1px rgb(70, 47, 30);
-  color: chocolate;
-  background-color: rgb(24, 61, 24);
-  color: rgb(221, 214, 209);
-  background-color: rgb(30, 78, 30);
->>>>>>> Stashed changes
 }
 
 * {
-align-items: center;
-align-content: center;
-text-align: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
 }
 
 label {
-box-sizing: border-box;
-font-weight: bolder;
-color: black;
+  box-sizing: border-box;
+  font-weight: bolder;
+  color: black;
 }
 
 span {
-color: rgb(24, 23, 23);
-font-size: large;
-font-weight: bold;
+  color: rgb(24, 23, 23);
+  font-size: large;
+  font-weight: bold;
 }
 
 input[type=text]{
-width: 30%;
-box-shadow: 1 1 13px rgb(21, 44, 31);
-padding: 0px 0px 10px 0px;
-border-radius: 10px;
+  width: 30%;
+  box-shadow: 1 1 13px rgb(21, 44, 31);
+  padding: 0px 0px 10px 0px;
+  border-radius: 10px;
 }
 
 .add-form {
-<<<<<<< Updated upstream
   position: relative;
   background-color: beige;
-=======
-position: relative;
-background-color: beige;
->>>>>>> Stashed changes
 }
 
 #time {
-width: 20%;
-border: 1px inset rgb(136, 122, 122);
-border-radius: 11px;
-}
-
-#time:focus {
-border: 1px lightblue solid;
-}
-
-.pdate {
-<<<<<<< Updated upstream
   width: 20%;
   border: 1px inset rgb(136, 122, 122);
   border-radius: 11px;
-=======
-width: 20%;
-border: 1px inset rgb(136, 122, 122);
-border-radius: 11px;
->>>>>>> Stashed changes
+}
+
+#time:focus {
+  border: 1px lightblue solid;
+}
+
+.pdate {
+  width: 20%;
+  border: 1px inset rgb(136, 122, 122);
+  border-radius: 11px;
 }

@@ -3,10 +3,6 @@ import { FormGroup, ValidatorFn, EmailValidator } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { USER } from '../user-interfacet';
-<<<<<<< Updated upstream
-=======
-import { faLock } from '@fortawesome/free-solid-svg-icons'
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-login',
@@ -14,10 +10,6 @@ import { faLock } from '@fortawesome/free-solid-svg-icons'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-<<<<<<< Updated upstream
-=======
-  faLock = faLock;
->>>>>>> Stashed changes
   username!: string;
   password!: string;
 
