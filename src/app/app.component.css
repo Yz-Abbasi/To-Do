@@ -51,6 +51,10 @@ footer {
 
 .background {
     position: fixed;
+<<<<<<< Updated upstream
+=======
+    width: 100vw;
+>>>>>>> Stashed changes
     width: 100%;
     height: 100vh;
     top: 0;

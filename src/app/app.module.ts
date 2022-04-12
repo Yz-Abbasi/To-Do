@@ -48,6 +48,12 @@ import { LoginContainerComponent } from './login-container/login-container.compo
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {path: '', redirectTo: '/login', pathMatch: 'full'},
+<<<<<<< Updated upstream
+=======
+      {path: 'login', component: LoginComponent},
+      {path: '**', component: NotfoundComponent},
+      {path: 'signup', component: SignupComponent},
+>>>>>>> Stashed changes
       {path: 'login', component: LoginContainerComponent},
       {path: 'signup', component: SignupContainerComponent},
       {path: 'tasks', component: TasksComponent},
