@@ -16,3 +16,26 @@
 .password {
     margin-left: 2px;
 }
+
+.login {
+    margin: 10px;
+    color: rgb(158, 149, 149);
+    text-align: center;
+    background-color: rgb(24, 22, 22);
+    border: 0;
+    padding-right: 16px;
+    padding-left: 14px;
+}
+
+.login:hover {
+    color: rgb(8, 153, 153);
+}
+
+.login:focus {
+    background-color: bisque;
+}
+
+label:hover {
+    color: black;
+    transition:all 0.3s ease
+}

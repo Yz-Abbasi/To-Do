@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 //import { TASKS } from 'src/app/mock-tasks';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { observable, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Task } from 'src/app/task-interface';
 
   const httpOptions = {

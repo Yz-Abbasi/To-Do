@@ -13,9 +13,4 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  addTask() {
-    console.log("Madar amirreza");
-  }
-
 }

@@ -15,6 +15,14 @@
   border-color: darkseagreen;
   background-image: url("https://images.unsplash.com/photo-1458324124043-7803d4fec380?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=df280ed170d2a9e25506f2d3db42f4f9");
 }*/
+
+* {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
@@ -38,7 +46,7 @@ a:hover {
 }
 
 .container-fluid {
-  max-width: 1200px;
+  width: 100%;
 }
 
 .tm-bg-black-transparent {
@@ -67,13 +75,17 @@ a:hover {
 
 
 #tmWelcome {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 15%;
+  margin-bottom: 0px;
 }
 
 .tm-brand-container-outer {
   margin-top: -400px;
+  width: 100%;
 }
 
 .tm-brand-container-inner {
@@ -96,6 +108,7 @@ a:hover {
 .parallax-window {
   min-height: 1100px;
   background: transparent;
+  width: 100%;
 }
 
 #tmContact {
@@ -143,15 +156,22 @@ a:hover {
 .navtop {
   background-color: #333;
   overflow: hidden;
-  margin-right: 50px;
+  background-size: cover;
+  width: 100%;
+  padding-right: 100%;
 }
 
 .navtop a {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 50%;
+  padding-left: 5%;
+  display: inline;
   text-decoration: none;
+  width: 100%;
   font-size: 17px;
 }
 
@@ -168,4 +188,12 @@ a:hover {
 .log {
   padding-right: inherit;
   width: 40%;
+}
+
+#p {
+  margin-bottom: 0px;
+}
+
+.outlet {
+  width: 100vw;
 }

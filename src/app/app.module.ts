@@ -17,6 +17,10 @@ import { FooterComponent } from './src/app/components/footer/footer/footer.compo
 import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { SignupComponent } from './signup/signup.component';
+import { UserComponent } from './user/user.component';
+import { DescriptionComponent } from './description/description.component';
+import { SignupContainerComponent } from './signup-container/signup-container.component';
+import { LoginContainerComponent } from './login-container/login-container.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     NotfoundComponent,
     SignupComponent,
+    UserComponent,
+    DescriptionComponent,
+    SignupContainerComponent,
+    LoginContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +48,11 @@ import { SignupComponent } from './signup/signup.component';
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {path: '', redirectTo: '/login', pathMatch: 'full'},
-      {path: 'login', component: LoginComponent},
-      {path: '**', component: NotfoundComponent},
-      {path: 'signup', component: SignupComponent}
+      {path: 'login', component: LoginContainerComponent},
+      {path: 'signup', component: SignupContainerComponent},
+      {path: 'tasks', component: TasksComponent},
+      {path: 'description', component: DescriptionComponent},
+      {path: '**', component: NotfoundComponent}
     ])
   ],
   providers: [],

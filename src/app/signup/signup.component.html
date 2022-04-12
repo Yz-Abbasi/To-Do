@@ -1,8 +1,14 @@
-<div class="container">
-    <div class="sign-container">
-        <label for="username">Username :</label>
-        <input type="text" name="username" class="username" id="username" placeholder="User"><br>
-        <label for="password">Password :</label>
-        <input type="password" name="password" class="password" id="password" placeholder="Password">
-    </div>
-</div>
+<body>
+    <form (ngSubmit)="submitUser()">
+        <div class="container">
+            <div class="sign-container">
+                <label for="username">Username :</label>
+                <input type="text" name="username" class="username" [(ngModel)]="username" id="username" placeholder="Username"><br>
+                <label for="password">Password :</label>
+                <input type="password" name="password" class="password" [(ngModel)]="password" id="password" placeholder="Password">
+                <!--<fa-icon [ngStyle]="{'color': 'purple'}" [icon]="faTimes" title="Signup"></fa-icon>-->
+                <input type="submit" value="Sign up" class="signup" (click)="submitUser()">
+            </div>
+        </div>
+    </form>
+</body>

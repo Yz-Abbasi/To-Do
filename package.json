@@ -30,6 +30,7 @@
     "angular-mydatepicker": "^0.11.5",
     "json-server": "^0.17.0",
     "mc-datepicker": "^0.6.5",
+    "ngx-cookie-service": "^13.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

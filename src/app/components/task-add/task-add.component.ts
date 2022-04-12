@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter,  } from '@angular/core';
 import { Task } from 'src/app/task-interface';
-import { IAngularMyDpOptions, IMyDateModel} from 'angular-mydatepicker'
 
 @Component({
   selector: 'app-task-add',
