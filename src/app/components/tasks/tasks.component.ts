@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { TASKS } from 'src/app/mock-tasks';
+import { TASKS } from 'src/app/mock-tasks';
 import { Task } from 'src/app/task-interface';
 import { TaskService } from 'src/app/src/app/services/task.service';
 
@@ -9,13 +9,25 @@ import { TaskService } from 'src/app/src/app/services/task.service';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-tasks: Task[] = [];
+  task ={
+    id : null,
+    task : "",
+    date : "",
+    time : ""
+  }
+
+tasks: Task[] = []
 
   constructor(public taskService: TaskService) { }
 
   ngOnInit(): void {
-    this.taskService.getTask().subscribe((tasks) => this.tasks = tasks);
+    this.getTasks();
   }
+  getTasks(){
+    this.taskService.getTask().subscribe(tasks => this.tasks = tasks)
+  }
+
+
   deleteTask(task: Task) {
     this.taskService.deleteTask(task).subscribe(() => this.tasks = this.tasks.filter(t => t.id !== task.id ));
   }

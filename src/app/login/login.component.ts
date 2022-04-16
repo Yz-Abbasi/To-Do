@@ -1,9 +1,9 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { FormGroup, ValidatorFn, EmailValidator, ReactiveFormsModule, FormControl } from '@angular/forms';
+import { FormGroup, ValidatorFn, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { USER } from '../user-interfacet';
-import { faLock } from '@fortawesome/free-solid-svg-icons';
+//import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { UserService } from '../src/app/services/user.service';
 
 @Component({
@@ -12,7 +12,6 @@ import { UserService } from '../src/app/services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  faLock = faLock;
   loginForm = new FormGroup({
   username: new FormControl,
   password: new FormControl,

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-//import { TASKS } from 'src/app/mock-tasks';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry} from 'rxjs';
 import { Task } from 'src/app/task-interface';
 
   const httpOptions = {
@@ -14,21 +14,27 @@ import { Task } from 'src/app/task-interface';
 @Injectable({
   providedIn: 'root'
 })
-export class TaskService {
-  public apiURL = "http://localhost:4300/tasks";
+  /*public apiURL = "http://localhost:4300/tasks";*/
+  export class TaskService{
+    public taskURL = 'api/tasks/';
 
-  constructor(public http:HttpClient) { }
+  constructor(private http:HttpClient) { }
 
   getTask(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.apiURL);
+    return this.http.get<Task[]>(this.taskURL).pipe(retry(2),
+    catchError((error: HttpErrorResponse) => {
+      console.error(error);
+      return throwError(error);
+    })
+    );
   }
 
-  deleteTask(task: Task){
-    const url = `${this.apiURL}/${task.id}`;
+  deleteTask(task: Task) {
+    const url = `${this.taskURL}/${task.id}`;
     return this.http.delete<Task>(url);
   }
 
-  addTask (task: Task): Observable<Task>{
-    return this.http.post<Task>(this.apiURL, task, httpOptions)
+  addTask(task: Task): Observable<Task> {
+    return this.http.post<Task>(this.taskURL, task, httpOptions);
   }
 }

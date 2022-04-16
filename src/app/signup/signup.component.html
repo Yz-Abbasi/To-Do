@@ -1,14 +1,33 @@
 <body>
-    <form (ngSubmit)="submitUser()">
-        <div class="container">
-            <div class="sign-container">
-                <label for="username">Username :</label>
-                <input type="text" name="username" class="username" [(ngModel)]="username" id="username" placeholder="Username"><br>
-                <label for="password">Password :</label>
-                <input type="password" name="password" class="password" [(ngModel)]="password" id="password" placeholder="Password">
-                <!--<fa-icon [ngStyle]="{'color': 'purple'}" [icon]="faTimes" title="Signup"></fa-icon>-->
-                <input type="submit" value="Sign up" class="signup" (click)="submitUser()">
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" (ngSubmit)="submitUser()">
+                            <div class="login__field">
+                                <i class="login__icon fas fa-user"></i>
+                            <input type="text" name="username" class="login__input" [(ngModel)]="username" id="username" placeholder="Username"><br>
+                            </div>
+                            <div class="login__field">
+                                <i class="login__icon fas fa-lock"></i>
+                            <input type="password" name="password" class="login__input" [(ngModel)]="password" id="password" placeholder="Password">
+                            </div>
+                            <!--<fa-icon [ngStyle]="{'color': 'purple'}" [icon]="faTimes" title="Signup"></fa-icon>-->
+                            <div>
+                                <input type="submit" value="Sign up" class="button login__submit">
+                                <i class="button__icon fas fa-chevron-right"></i>
+                            </div>
+                        </form>
+                        <div>
+                            <a class="button loginlink" routerLink="/login">Login</a>
+                        </div>
+                    </div>
+                    <div class="screen__background">
+                        <span class="screen__background__shape screen__background__shape4"></span>
+                        <span class="screen__background__shape screen__background__shape3"></span>		
+                        <span class="screen__background__shape screen__background__shape2"></span>
+                        <span class="screen__background__shape screen__background__shape1"></span>
+                    </div>	
             </div>
-        </div>
-    </form>
+    </div>
+    <input type="submit" class="login" value="login"> 
 </body>

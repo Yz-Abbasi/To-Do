@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskFunctionsComponent } from '../tasks/task-functions/task-functions.component';
 
 @Component({
   selector: 'app-home',

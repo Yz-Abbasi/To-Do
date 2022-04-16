@@ -1,11 +1,17 @@
+// Modules declarations go here
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
+//Services decalrations go here
+import { DataService } from './src/app/services/data.service';
+
+//Components declarations go here
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
@@ -47,6 +53,7 @@ import { AdminComponent } from './modules/components/admin/admin.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientInMemoryWebApiModule.forRoot(DataService)
     /*RouterModule.forRoot([
     ])*/
   ],

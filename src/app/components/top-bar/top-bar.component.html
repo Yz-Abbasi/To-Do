@@ -10,11 +10,10 @@
                     <div class="tm-brand-container text-center">
                       <h1 class="tm-brand-name">{{ title }}</h1>
                       <p class="tm-brand-description mb-0" id="p">Hello</p>
-                    </div>
+                    </div>                    
                   </div>
                   <nav class="navtop">
-                    <a routerLinkActive="active current" routerLink="/login">Login</a>
-                    <a routerLinkActive="active current" routerLink="/signup">SignUp</a>
+                    <a class="logout" (click)="logout()">Logout</a>
                     <a routerLinkActive="active current" routerLink="/admin/tasks">Tasks</a>
                     <a routerLinkActive="active current" routerLink="/admin/description">Description</a>
                   </nav>

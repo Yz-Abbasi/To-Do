@@ -49,6 +49,11 @@
       "username": "one day",
       "password": "CAT0903",
       "id": 7
+    },
+    {
+      "username": "Kyle",
+      "password": "password2",
+      "id": 8
     }
   ]
 }
