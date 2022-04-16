@@ -102,7 +102,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding: 0;
   }
 .background {
-  height: 100%;
+  height: 100;
   width: 100vw;
   background-color: blue;
   background-image: linear-gradient(10deg, lightblue 50%, transparent 50%), linear-gradient(-60deg, brown 30%, transparent 30%);

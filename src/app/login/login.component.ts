@@ -3,7 +3,7 @@ import { FormGroup, ValidatorFn, ReactiveFormsModule, FormControl } from '@angul
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { USER } from '../user-interfacet';
-//import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { UserService } from '../src/app/services/user.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   username: new FormControl,
   password: new FormControl,
   });
-
+  falock = faLock;
   constructor(private authorization: UserService, private router: Router) { }
 
   ngOnInit(): void {

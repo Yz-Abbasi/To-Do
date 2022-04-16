@@ -2,8 +2,9 @@
 
             <div class="container">
                 <div class="screen">
-                    <div class="screen__content">
+                    <div class="screen__content">                     
                         <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <fa-icon class="lock-icon" [ngStyle]="{'color':'bisque'}" [icon]="falock"></fa-icon>
                             <div class="login__field">
                                 <i class="login__icon fas fa-user"></i>
                                 <input type="text" id="username" name="password" class="login__input" placeholder="User name" formControlName="username">
