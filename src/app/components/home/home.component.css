@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+#black {
+    margin-left: 0%;
+    padding-left: 35%;
+    padding-right: 40%;
+    color: lightyellow;
+}
+
+#tmWelcome {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.tm-welcome-container {
+    min-height: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+  
+  .tm-welcome-title {
+    margin-bottom: 40px;
+}
+  
+  .tm-welcome-left {
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+  
+  .tm-welcome-left-col {
+    display: flex;
+    align-items: center;
+}
+  
+  .tm-welcome-right {
+    color: white;
+    background-color: #aa5857;
+    padding: 80px 43px 70px;
+    height: 100%;
+}
+  
+  .tm-welcome-icon {
+    margin-bottom: 50px;
+    display: block;
+    text-align: center;
+}
+
+.tm-brand-container-outer {
+    margin-top: -400px;
+    width: 100%;
+}
+  
+  .tm-brand-container-inner {
+    width: 100%;
+}
+  
+  .tm-brand-container {
+    padding: 75px 110px;
+}
+  
+  .tm-brand-name {
+    font-size: 3.8rem;
+    display: inline-flex;
+}
+  
+  .tm-brand-description {
+    font-size: 1.4rem;
+    color: rgb(233, 227, 227);
+}
+
+  .parallax-window {
+    min-height: 1100px;
+    background: transparent;
+    width: 100%;
+}
+
+.tm-bg-black-transparent {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tm-brand-container-inner {
+    width: 100%;
+}

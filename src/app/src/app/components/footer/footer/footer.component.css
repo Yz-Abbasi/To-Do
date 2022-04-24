@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #git {
     margin-top: 30px;
     margin-left: 3px;
@@ -8,21 +12,14 @@ h4 {
     font-size: larger;
     display: inline-flex;
     position: relative;
-    box-sizing: border-box;
     margin-left: 10%;
     color: rgb(218, 218, 218);
 }
 
 footer {
-    position: relative;
-    /*border-top-left-radius: 31px;
-    border-top-right-radius: 31px;*/
-}
-
-.whole {
-    background-color: rgb(128, 128, 128, 0.8);
-    padding-top: -5px;
-    border-top: 1px solid rgb(224, 212, 212);
+    width: 100%;
+    position: sticky;
+    bottom: 0;
 }
 
 #git {
@@ -30,13 +27,11 @@ footer {
     position: relative;
 }
 
-.content {
+.container {
     opacity: 1;
-    width: 33%;
     height: 100%;
-}
-
-.rights {
-    float: right;
-    position: relative;
+    width: 100%;
+    padding: 0 15px;    
+    background-color: rgb(128, 128, 128, 0.8);
+    border-top: 1px solid rgb(224, 212, 212);
 }

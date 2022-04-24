@@ -9,6 +9,7 @@ import { TaskFunctionsComponent } from '../tasks/task-functions/task-functions.c
 export class HomeComponent implements OnInit {
 
   constructor() { }
+  title: string = "To Do List";
 
   ngOnInit(): void {
   }

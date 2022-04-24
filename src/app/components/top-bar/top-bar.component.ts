@@ -8,7 +8,6 @@ import { UserService } from 'src/app/src/app/services/user.service';
 })
 export class TopBarComponent implements OnInit {
   constructor(private auth: UserService) { }
-  title: string = "To Do List";
 
   ngOnInit(): void {
   }

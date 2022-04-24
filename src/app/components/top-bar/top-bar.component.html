@@ -1,25 +1,20 @@
-    <header>
-      <!-- Welcome Section -->
-        <section id="tmWelcome" class="parallax-window w-100" data-parallax="scroll" data-image-src="../../../assets/mini-profile-bg-01.jpg" style="position: relative;">
-            <div class="container-fluid tm-brand-container-outer w-100">
-              <div class="row">
-                <div class="col-12">
-                  <!-- Logo Area -->
-                  <!-- Black transparent bg -->
-                  <div id="black" class="ml-auto mr-0 tm-bg-black-transparent text-white tm-brand-container-inner w-100">
-                    <div class="tm-brand-container text-center w-100">
-                      <h1 class="tm-brand-name">{{ title }}</h1>
-                      <p class="tm-brand-description mb-0" id="p">Welcome</p>
-                    </div>                    
-                  </div>
-                  <nav class="navtop">
-                    <a class="logout" (click)="logout()">Logout</a>
-                    <a routerLinkActive="active current" routerLink="/admin/tasks">Tasks</a>
-                    <a routerLinkActive="active current" routerLink="/admin/description">Description</a>
-                  </nav>
-                  <router-outlet class="outlet"></router-outlet>
-                </div>
-              </div>
-            </div>
-          </section>
-    </header>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active current" routerLink="/admin/tasks">Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active current" routerLink="/admin/description">Description</a>
+          </li>
+          <li class="nav-item">
+            <a id="logout" class="nav-link active" aria-current="page" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <router-outlet class="outlet"></router-outlet>
+</header>     
