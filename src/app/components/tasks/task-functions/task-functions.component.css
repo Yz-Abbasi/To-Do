@@ -1,20 +1,6 @@
-.taskClass {
-    position: relative;
-    text-align: center;
-    border-top: solid 1px rgb(7, 71, 1);
-    align-content: flex-start;
-    justify-items: center;
-    background-color: antiquewhite;
-    border-radius: 32px;
-    margin: 0% 2% 0% 2%;
-    /*border-top-left-radius: 32px;*/
-}
-
-.container {
-    position: relative;
-    margin: 0% 20% 0% 20%;
-    display: inline;
-    background-color: blue;
+.tasks {
+  color: azure;
+  display: inline;
 }
 
 fa-icon {
@@ -24,6 +10,10 @@ fa-icon {
     margin-left: -40px;
 }
 
-p {
-    margin-bottom: 15px;
+#icon:hover {
+  cursor:pointer;
+}
+
+.w-100 {
+  width: 100vw;
 }

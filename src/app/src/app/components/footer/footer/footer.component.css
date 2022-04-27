@@ -1,37 +1,23 @@
-* {
-    box-sizing: border-box;
-}
-
-#git {
-    margin-top: 30px;
-    margin-left: 3px;
-}
-
-h4 {
-    font-weight: bolder;
-    font-size: larger;
-    display: inline-flex;
-    position: relative;
-    margin-left: 10%;
-    color: rgb(218, 218, 218);
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
 }
 
 footer {
-    width: 100%;
-    position: sticky;
-    bottom: 0;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
 }
 
-#git {
-    opacity: 1;
-    position: relative;
+h5 {
+  color: antiquewhite;
 }
 
-.container {
-    opacity: 1;
-    height: 100%;
-    width: 100%;
-    padding: 0 15px;    
-    background-color: rgb(128, 128, 128, 0.8);
-    border-top: 1px solid rgb(224, 212, 212);
+a {
+  background-color: antiquewhite;
+  float: left;
+  margin-right: 30%;
+  border: 3px solid white;
+  border-radius: 45%;
 }

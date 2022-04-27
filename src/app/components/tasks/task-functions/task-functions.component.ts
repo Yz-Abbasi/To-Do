@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/task-interface';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-functions',
@@ -10,7 +10,7 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 export class TaskFunctionsComponent implements OnInit {
   @Input() task!: Task;
   @Output() deleteATask: EventEmitter<Task> = new EventEmitter;
-  faTimes = faTimesCircle;
+  faTimes = faTrashCan;
 
   constructor() { }
 

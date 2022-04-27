@@ -7,7 +7,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-
+import { AngularEmojisModule} from 'angular-emojis';
 //Services decalrations go here
 import { DataService } from './src/app/services/data.service';
 
@@ -50,10 +50,12 @@ import { AdminComponent } from './modules/components/admin/admin.component';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    AngularEmojisModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientInMemoryWebApiModule.forRoot(DataService)
+    HttpClientInMemoryWebApiModule.forRoot(DataService),
+
     /*RouterModule.forRoot([
     ])*/
   ],
