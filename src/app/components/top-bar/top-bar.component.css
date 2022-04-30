@@ -1,10 +1,4 @@
-
-.bg-dark {
-  --bs-bg-opacity: 1;
-  background-color: rgb(51, 48, 48)!important;
-}
-
-.fixed-top {
+/* .fixed-top {
   position: fixed;
   top: 0;
   right: 0;
@@ -40,4 +34,4 @@
   transition: .15s ease-in-out;
   background-color: rgb(194, 33, 59);
   color: #0dcaf0;
-}
+} */

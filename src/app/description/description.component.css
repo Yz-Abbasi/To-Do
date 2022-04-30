@@ -1,73 +1,12 @@
-.container-fluid {
+/* .container-fluid {
     width: 100%;
     margin-bottom: 100px;
   }
-  
-  .tm-bg-black-transparent {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .tm-bg-white-transparent {
-    background-color: rgba(182, 178, 178, 0.8);
-  }
-  
-  .tm-bg-green {
-    background-color: #98cb00;
-  }
-  
-  .tm-bg-orange {
-    background-color: #cc6733;
-  }
-  
-  .tm-bg-blue {
-    background-color: #3398cc;
-  }
-  
-  .tm-bg-dark-gray {
-    background-color: #676767;
-  }
-  
-  
-  #tmWelcome {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-top: 15%;
-  }
-  
-  .tm-brand-container-outer {
-    margin-top: -400px;
-    width: 100%;
-  }
-  
-  .tm-brand-container-inner {
-    max-width: 580px;
-    width: 100%;
-  }
-  
-  .tm-brand-container {
-    padding: 75px 110px;
-  }
-  
-  .tm-brand-name {
-    font-size: 3.8rem;
-  }
-  
+
   .tm-brand-description {
     font-size: 1.4rem;
   }
-  
-  .parallax-window {
-    min-height: 1100px;
-    background: transparent;
-    width: 100%;
-  }
-  
-  #tmContact {
-    min-height: 1197px;
-  }
-  
+
   .tm-welcome-container {
     min-height: 400px;
     position:relative;
@@ -76,73 +15,40 @@
     width: 100%;
     display: flex;
     align-items: stretch;
+    color:rgb(231, 231, 231)
   }
-  
+
   .tm-welcome-title {
     margin-bottom: 40px;
   }
-  
+
   .tm-welcome-left {
     padding-right: 30px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .tm-welcome-left-col {
     display: flex;
     align-items: center;
   }
-  
+
   .tm-welcome-right {
     color: white;
     background-color: #aa5857;
     padding: 80px 43px 70px;
     height: 100%;
   }
-  
-  .tm-welcome-icon {
-    margin-bottom: 50px;
-    display: block;
-    text-align: center;
-  }
-  
-  .navtop {
-    background-color: #333;
-    overflow: hidden;
-    background-size: cover;
-    padding-right: 45px;
-  }
-  
-  .navtop a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .navtop a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .navtop a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  .log {
-    padding-right: inherit;
-    width: 40%;
-  }
-  
+
 .descrip p {
   font-size: large;
   font-weight: bolder;
 }
 
 .descrip a {
-  text-decoration:none;
-  color: #98cb00;
+  color:cornflowerblue
 }
+
+.h-100 {
+  min-height: 80vh;
+} */

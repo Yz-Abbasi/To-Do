@@ -1,4 +1,4 @@
-<form class="bg-light w-100" (ngSubmit)="submit()">
+<form class="bg-light vw-100 fw-bold" (ngSubmit)="submit()">
   <div class="form-group col-md-10">
     <label for="inputTask">Task</label>
     <input type="text" class="form-control" id="inputTask" name="task" [(ngModel)]="task" placeholder="My task ...">
@@ -14,7 +14,7 @@
       <input type="time" name="time" [(ngModel)]="time" class="form-control" id="time">
     </div>
   </div><br>
-  <button type="submit" value="save Task" class="btn btn-primary">Add</button><br><br>
+  <button type="submit" value="save Task" class="btn btn-primary ms-4 px-3 float-right end-0">Add</button><br><br>
 </form>
 <br>
         <!--

@@ -1,4 +1,4 @@
-<div>
+<div class="col-md-12 pt-2 vh-100 vw-100 bg-secondary mb-5">
     <app-task-add class="task-add" (onAddTask)="addTask($event)"></app-task-add>
     <app-task-functions class="task-functions" *ngFor="let task of tasks" [task]="task" (deleteATask)="deleteTask(task)"> </app-task-functions>
 </div>
