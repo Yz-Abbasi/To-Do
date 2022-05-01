@@ -24,16 +24,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['admin']);
     }
   }
-  /*
-  onSubmit() {
-    if (!this.username){
-      alert("Enter yout Username before continuing");
-    } else if (!this.password){
-      alert("Enter your Password before continuing")
-    } else{
-    console.log("User received");}
-  } */
-  
+
   onSubmit(): void {
     if (this.loginForm.valid) {
       this.authorization.login(this.loginForm.value).subscribe(

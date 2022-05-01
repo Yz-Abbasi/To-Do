@@ -1,10 +1,10 @@
-<form class="bg-light vw-100 fw-bold" (ngSubmit)="submit()">
+<form class="bg-light vw-100 fw-bold px-4" (ngSubmit)="submit()">
   <div class="form-group col-md-10">
     <label for="inputTask">Task</label>
     <input type="text" class="form-control" id="inputTask" name="task" [(ngModel)]="task" placeholder="My task ...">
   </div>
   <div class="form-group row">
-    <div class="form-group row col-md-4">
+    <div class="form-group row col-md-4 px-4">
       <label for="inputDate">Date</label>
       <input type="date" name="date" [(ngModel)]="date" class="form-control" id="inputDate" placeholder="Date goes here">
       <span> Selected date: {{date | date}}</span>
@@ -17,7 +17,8 @@
   <button type="submit" value="save Task" class="btn btn-primary ms-4 px-3 float-right end-0">Add</button><br><br>
 </form>
 <br>
-        <!--
+
+<!--
 <form class="add-form" (ngSubmit)="submit()">
       <span class="input-group-text" id="inputGroup-sizing-default">Task</span>
         <input type="text" class="form-control" aria-label="default" aria-describedby="inputgroup-sizing-default" name="task" [(ngModel)]="task" id="task" placeholder="Add task here"></div>
