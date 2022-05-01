@@ -22,8 +22,7 @@ NOTE3: The reference I've used is provided at the bottom.
 REFERENCE: https://www.youtube.com/watch?v=3dHNOWTI7H8
 
 How to use: 
-1. Open two command prompts(works in VS Code)
-2. Navigate to To-Do (Using cd command)
-3. In the first prompt type "ng serve" (without quotation marks)
-4. In the second one, type npm run server to run db.json
+1. Open a command prompt(preferably in VS Code)
+2. Navigate to To-Do if needed (Using cd command)
+3. In the prompt, type "ng serve" (without quotation marks)
 5. Refresh the page, task(s) should show up now
