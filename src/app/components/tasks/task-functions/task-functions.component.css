@@ -1,19 +1,8 @@
-/* .tasks {
-  color: azure;
-  display: inline;
-}
-
-fa-icon {
-    float: right;
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-left: -40px;
-}
-
 #icon:hover {
   cursor:pointer;
 }
 
-.w-100 {
-  width: 100vw;
-} */
+.d-grid {
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+}

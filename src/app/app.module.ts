@@ -27,6 +27,7 @@ import { DescriptionComponent } from './description/description.component';
 import { SignupContainerComponent } from './signup-container/signup-container.component';
 import { LoginContainerComponent } from './login-container/login-container.component';
 import { AdminComponent } from './modules/components/admin/admin.component';
+import { FulfilledComponent } from './components/tasks/fulfilled/fulfilled.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { AdminComponent } from './modules/components/admin/admin.component';
     SignupContainerComponent,
     LoginContainerComponent,
     AdminComponent,
+    FulfilledComponent,
   ],
   imports: [
     BrowserModule,

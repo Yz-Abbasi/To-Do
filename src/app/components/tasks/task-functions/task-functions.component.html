@@ -1,17 +1,9 @@
-<div class="container w-45 d-flex justify-content-center">
- <div class=" p-relative px-3 py-1 mx-2 mb-3 bg-dark w-50 border">
-   <div class="col-sm-12 px-5 pe-5 d-flex flex-row justify-content-between text-white">
-    <!--This is the task itself-->
-    <h3>{{ task.task }}</h3>
-    <!-- This is the date -->
-    <div>
-    <h4>{{ task.date | date }}</h4>
-    <!-- This is the time when task should get done -->
-    <p style="font-weight: bold;">Time: {{ task.time }}</p></div>
-        <!-- This is a custom Icon brought from font awesome package -->
-        <div class="p-absolute top-0 end-0">
-        <fa-icon id="icon" [ngStyle]="{'color': 'red'}" [icon]="faTimes" (click)="deleteTask(task)" title="Delete"></fa-icon>
-        </div>
-      </div>
-  </div>
-</div>
+    <li class="list-group-item d-flex text-break text-white bg-secondary">
+          <div class="fw-bold pe-2 mw-40">{{ task.task }}</div>
+          <p class="pe-2">{{ task.date | date }}</p>
+          <p class="text-bold pe-2">Time: <span>{{ task.time}}</span></p>
+          <div class="box d-grid position-absolute top-0 end-0">
+            <!-- <fa-icon class="pe-1" [icon]="faTimes" [ngStyle]="{'color': 'red'}" (click)="(deleteTask(task))"></fa-icon> -->
+            <fa-icon [icon]="faCheck" [ngStyle]="{'color': 'lightgreen'}" (click)="(completeTask(task))" title="Complete"></fa-icon>
+          </div>
+    </li>

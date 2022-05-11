@@ -11,20 +11,11 @@ export class TaskAddComponent implements OnInit {
   task!: string;
   date!: string;
   time!: string;
+  isDone: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-  /*
-  myDpOptions: IAngularMyDpOptions = {
-    dateRange: false,
-    dateFormat: 'dd.mm.yyyy'
-    // other options are here...
-  };
-    // optional date changed callback
-    onDateChanged(event: IMyDateModel): void {
-      // date selected
-    }*/
     showDate() {
       console.log(this.date);
     }
@@ -37,7 +28,8 @@ export class TaskAddComponent implements OnInit {
     const newTask = {
       task: this.task,
       date: this.date,
-      time: this.time
+      time: this.time,
+      isDone: this.isDone
     }
   // @todo - emit event
   this.onAddTask.emit(newTask);

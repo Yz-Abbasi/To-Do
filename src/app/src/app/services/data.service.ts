@@ -11,14 +11,30 @@ export class DataService implements InMemoryDbService {
   createDb () {
     return {
       tasks: [
-        
+
         {
           id: 0,
           task: "Work out",
           date: "15 July",
-          time: "15:15"
-        }   
-      ]
+          time: "15:15",
+          isDone: true
+        },
+        {
+          id: 1,
+          task: "Study",
+          date: " 16 July",
+          time: "10:30",
+          isDone: true
+        }
+      ],
+      dtasks : [{
+        id: 3,
+        task: "Camping",
+        date: "11 July",
+        time: "13:10",
+        isDone: true
+      }
+    ]
     }
   }
 }

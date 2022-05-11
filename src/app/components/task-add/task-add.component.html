@@ -1,16 +1,16 @@
-<form class="bg-light vw-100 fw-bold px-4" (ngSubmit)="submit()">
+<form class="bg-light w-100 fw-bold px-4" (ngSubmit)="submit()">
   <div class="form-group col-md-10">
     <label for="inputTask">Task</label>
     <input type="text" class="form-control" id="inputTask" name="task" [(ngModel)]="task" placeholder="My task ...">
   </div>
   <div class="form-group row">
     <div class="form-group row col-md-4 px-4">
-      <label for="inputDate">Date</label>
-      <input type="date" name="date" [(ngModel)]="date" class="form-control" id="inputDate" placeholder="Date goes here">
+      <label for="inputDate">Date <small class="ps-3">Click on the calendar!</small></label>
+      <input type="text" name="date" onfocus="(this.type = 'date')" onblur="( this.type = 'text')" [(ngModel)]="date" class="form-control" id="inputDate" placeholder="Date">
       <span> Selected date: {{date | date}}</span>
     </div>
     <div class="form-group col-md-2">
-      <label for="time">Time</label>
+      <label for="time">Time <small class=>Click on the clock!</small></label>
       <input type="time" name="time" [(ngModel)]="time" class="form-control" id="time">
     </div>
   </div><br>

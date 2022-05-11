@@ -1,4 +1,23 @@
-<div class="col-md-12 pt-2 vh-100 vw-100 bg-secondary ">
-    <app-task-add class="task-add" (onAddTask)="addTask($event)"></app-task-add>
-    <app-task-functions class="task-functions" *ngFor="let task of tasks" [task]="task" (deleteATask)="deleteTask(task)"> </app-task-functions>
+<div class="h-100 col-md-9 ms-sm-auto col-lg-10 px-md-0">
+    <app-task-add (onAddTask)="addTask($event)"></app-task-add>
+</div>
+<div class="col-md-4 col-sm-4 px-md-4 ms-7 d-flex flex-column">
+  <div class="row">
+    <ul class="list-group list-group">
+      <li class="list-group-item list-group-item-primary pb-1">
+        Tasks <span *ngIf="tasks.length > 0">({{tasks.length}})</span>
+      </li>
+      <li>
+        <app-task-functions *ngFor="let task of tasks" [task]="task" (deleteATask)="deleteTask(task)" (completeATAsk)="pushTask(task)"></app-task-functions>
+      </li>
+    </ul>
+  </div>
+  <ul class="list-group list-group position-absolute top-20 end-0 me-5 w-40">
+    <li class="list-group-item list-group-item-primary pb-1">
+      Fulfilled <span *ngIf="dtasks.length > 0">({{dtasks.length}})</span>
+    </li>
+    <li>
+      <app-fulfilled *ngFor="let dtask of dtasks" [dtask]="dtask" (deleteATask)="deleteDTask(dtask)"></app-fulfilled>
+    </li>
+  </ul>
 </div>
