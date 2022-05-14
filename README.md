@@ -3,6 +3,8 @@ To Do list
 This is a very simple and easy to use "To do list", in which you can add and delete, your daily tasks.
 tried my best to keep the interface as simple as possible for not only users, but also for fellow devs who want to use it and develop it further.
 
+⚠️ There is a breaking bug that occurs randomly, and remove task info while moving to the done box. MORE DETAILS IN THE Issues TAB ⚠️
+
 -------------------------------
 How to login:
 
