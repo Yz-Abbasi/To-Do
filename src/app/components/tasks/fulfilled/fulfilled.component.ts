@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/task-interface';
 import { TASKS } from 'src/app/mock-tasks';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-fulfilled',
@@ -13,15 +14,20 @@ export class FulfilledComponent implements OnInit {
 @Output() deleteATask:EventEmitter<Task> = new EventEmitter;
 
 faTimes= faTrashCan;
-// public fulfilled!:Task;
+
+public _dtask!: string;
+public _ddate!: string;
+public _dtime!: string;
+
   constructor() { }
 
   ngOnInit(): void {
+    this._dtask = this.dtask.task;
+    this._ddate = this.dtask.date;
+    this._dtime = this.dtask.time;
   }
 
   deleteTask(dtask: any) {
     this.deleteATask.emit(dtask);
   }
-
-
 }

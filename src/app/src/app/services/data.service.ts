@@ -28,7 +28,6 @@ export class DataService implements InMemoryDbService {
         }
       ],
       dtasks : [{
-        id: 3,
         task: "Camping",
         date: "11 July",
         time: "13:10",
