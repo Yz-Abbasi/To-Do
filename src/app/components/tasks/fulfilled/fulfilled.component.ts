@@ -1,8 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from 'src/app/task-interface';
-import { TASKS } from 'src/app/mock-tasks';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-fulfilled',

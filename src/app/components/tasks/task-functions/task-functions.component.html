@@ -3,7 +3,8 @@
           <p class="ps-2">{{ task.date | date }}</p>
           <p class="text-bold ps-2 pe-2">Time: <span>{{ task.time}}</span></p>
           <div class="box d-grid position-absolute top-0 end-0">
-            <!-- <fa-icon class="pe-1" [icon]="faTimes" [ngStyle]="{'color': 'red'}" (click)="(deleteTask(task))"></fa-icon> -->
-            <fa-icon class="psuedo" [icon]="faCheck" [ngStyle]="{'color': 'lightgreen'}" (click)="(completeTask(task))" title="Complete"></fa-icon>
+            <button class="btn w-5 h-20 border-0" (click)="(completeTask(task))" [disabled]="clickCount > completeTaskCount" title="Complete">
+              <fa-icon [icon]="faCheck" [ngStyle]="{'color' : 'lightgreen'}"></fa-icon>
+            </button>
           </div>
     </li>

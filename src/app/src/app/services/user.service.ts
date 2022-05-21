@@ -2,9 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { Router } from '@angular/router';
-import { USER } from 'src/app/user-interfacet';
 
-const httpOptions = {
+const HTTP_OPTIONS = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
   })
@@ -13,18 +12,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UserService {
-  public apiURL = "http://localhost:4300/users";
 
   constructor(public http:HttpClient, private router: Router) { }
-
-   getUser(): Observable<USER> {
-     return this.http.get<USER>(this.apiURL);
-   }
-
-   addUser(user: USER): Observable<USER> {
-     return this.http.post<USER>(this.apiURL, user, httpOptions)
-   }
-
 
 // Login service starts from here, modify later for compatibility with DB
 
@@ -50,6 +39,6 @@ login({ username, password }: any): Observable<any> {
     this.setToken('abcdefghijklmnopqrstuvwxyz');
     return of({ name: 'Yazdan Abbasi', username: 'admin' });
   }
-  return throwError(new Error('Failed to login'));
+  return throwError(new Error('Check your Username and Password'));
 }
 }

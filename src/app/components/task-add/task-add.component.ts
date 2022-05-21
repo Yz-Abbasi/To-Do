@@ -16,22 +16,23 @@ export class TaskAddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-    showDate() {
-      console.log(this.date);
-    }
+
+  showDate() {
+    console.log(this.date);
+  }
 
   submit() {
     if(!this.task){
       alert("FILL THE TASK");
       return;
     }
-    const newTask = {
+    const NEW_TASK = {
       task: this.task,
       date: this.date,
       time: this.time,
       isDone: this.isDone
     }
-  // @todo - emit event
-  this.onAddTask.emit(newTask);
+
+  this.onAddTask.emit(NEW_TASK);
 }
 }

@@ -19,8 +19,10 @@ export class TaskFunctionsComponent implements OnInit {
   time!: string;
   isDone: boolean = false;
 
-  faTimes = faTrashCan;
   faCheck = faCheckCircle;
+
+  clickCount = 0;
+  completeTaskCount = 0;
 
   constructor() { }
 
@@ -32,8 +34,9 @@ export class TaskFunctionsComponent implements OnInit {
   }
 
   completeTask(task: any) {
-    const checkedTask = task
-    this.completeATAsk.emit(checkedTask);
+    const CHECKED_TASK = task;
+    this.completeATAsk.emit(CHECKED_TASK);
+    this.clickCount++;
   }
 
 }

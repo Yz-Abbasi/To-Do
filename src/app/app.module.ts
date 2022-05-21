@@ -15,16 +15,12 @@ import { DataService } from './src/app/services/data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
-import { AddComponent } from './components/button/add/add.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskFunctionsComponent } from './components/tasks/task-functions/task-functions.component';
 import { TaskAddComponent } from './components/task-add/task-add.component';
 import { FooterComponent } from './src/app/components/footer/footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { SignupComponent } from './signup/signup.component';
-import { DescriptionComponent } from './description/description.component';
-import { SignupContainerComponent } from './signup-container/signup-container.component';
 import { LoginContainerComponent } from './login-container/login-container.component';
 import { AdminComponent } from './modules/components/admin/admin.component';
 import { FulfilledComponent } from './components/tasks/fulfilled/fulfilled.component';
@@ -33,16 +29,12 @@ import { FulfilledComponent } from './components/tasks/fulfilled/fulfilled.compo
   declarations: [
     AppComponent,
     TopBarComponent,
-    AddComponent,
     TasksComponent,
     TaskFunctionsComponent,
     TaskAddComponent,
     FooterComponent,
     LoginComponent,
     NotfoundComponent,
-    SignupComponent,
-    DescriptionComponent,
-    SignupContainerComponent,
     LoginContainerComponent,
     AdminComponent,
     FulfilledComponent,

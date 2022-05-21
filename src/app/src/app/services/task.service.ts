@@ -40,13 +40,13 @@ import { Task } from 'src/app/task-interface';
   }
 
   deleteTask(task: Task) {
-    const url = `${this.taskURL}/${task.id}`;
-    return this.http.delete<Task>(url);
+    const URL = `${this.taskURL}/${task.id}`;
+    return this.http.delete<Task>(URL);
   }
 
   deleteDTask(dtask: Task) {
-    const url = `${this.dtaskURL}/${dtask.id}`;
-    return this.http.delete<Task>(url);
+    const URL = `${this.dtaskURL}/${dtask.id}`;
+    return this.http.delete<Task>(URL);
   }
 
   addTask(task: Task): Observable<Task> {

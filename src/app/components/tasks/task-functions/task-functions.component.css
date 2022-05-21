@@ -1,8 +1,14 @@
-.psuedo:hover {
+.btn:focus :hover {
   cursor:pointer;
+  border: 0px;
 }
 
 .d-grid {
   grid-auto-flow: column;
   grid-column-gap: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  padding-right: 0.5vw;
 }
