@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, SimpleChange, Input } from '@angular/core';
 import { Task } from 'src/app/task-interface';
+import { FormGroup, FormBuilder, Validator, Validators } from '@angular/forms';
+import { MatNativeDateModule, ThemePalette } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { TaskService } from 'src/app/src/app/services/task.service';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-tasks',
@@ -8,55 +12,96 @@ import { TaskService } from 'src/app/src/app/services/task.service';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  task ={
-    id : null,
-    task : "",
-    date : "",
-    time : "",
-    isDone: false
-  }
-
-  dtask = {
-    id: null,
-    task: "",
-    date: "",
-    time: "",
-    isDone: true
-  }
 
 tasks: Task[] = [];
-dtasks: Task[] = [];
+done: Task[] =[];
 
-  constructor(public taskService: TaskService) { }
+updateId!: number;
+isEditEnabled: boolean = false;
+
+// tasks: Task[] = [];
+// dtasks: Task[] = [];
+// uTask!: Task;
+todoForm !: FormGroup;
+
+  constructor(private formBuilder : FormBuilder) { }
 
   ngOnInit(): void {
-    this.getTasks();
-    this.getDtasks();
+    this.todoForm = this.formBuilder.group({
+      task : ['', Validators.required],
+      date : ['', Validators.required],
+      time : ['', Validators.required]
+    })
   }
-  getTasks(){
-    this.taskService.getTask().subscribe(tasks => this.tasks = tasks)
-  }
+  // old functions
 
-  getDtasks (){
-    this.taskService.getDTask().subscribe(dtasks => this.dtasks = dtasks)
-  }
-
-
-  deleteTask(task: Task) {
-    this.taskService.deleteTask(task).subscribe(() => this.tasks = this.tasks.filter(t => t.id !== task.id ));
+  deleteTask(index: number) {
+    this.tasks.splice(index, 1);
   }
 
-  deleteDTask(dtask: Task) {
-    this.taskService.deleteTask(dtask).subscribe(() => this.dtasks = this.dtasks.filter(t => t.id !== dtask.id ));
+  deleteDone(index: number) {
+    this.done.splice(index, 1);
   }
 
-  addTask(task: Task){
-    this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
+  addTask(){
+    this.tasks.push({
+      task: this.todoForm.value.task,
+      date: this.todoForm.value.date,
+      time: this.todoForm.value.time,
+      done: false
+    });
   }
 
-  pushTask(task: Task){
-    this.taskService.addDTask(task).subscribe((task) => this.dtasks.push(task));
-    this.deleteTask(task);
+  onEdit(item: Task, i: number){
+    console.log(`${i} AND ${i}`)
+    this.todoForm.controls['task'].setValue(item.task);
+    this.todoForm.controls['date'].setValue(item.date);
+    this.todoForm.controls['time'].setValue(item.time);
+    this.updateId = i;
+    this.isEditEnabled = true;
   }
 
+  updateTask(){
+    this.tasks[this.updateId].task = this.todoForm.value.task;
+    this.tasks[this.updateId].date = this.todoForm.value.date;
+    this.tasks[this.updateId].time = this.todoForm.value.time;
+    this.tasks[this.updateId].done = false;
+    this.todoForm.reset();
+    this.isEditEnabled = false;
+  }
+
+  // pushTask(task: Task){
+  //   this.taskService.addDoneTask(task).subscribe((task) => this.dtasks.push(task));
+  //   this.deleteTask(task);
+  // }
+
+  // getTaskToUpdate(_task: Task) {
+  //   this.uTask = _task;
+  // }
+
+  //   this.taskService.putTask(task, task.id as number).subscribe({next:(res)=>{
+  //     alert("Task updated successfully.");
+  //   },
+  //   error:() => {
+  //     alert("Couldn't update the task.");
+  //   }
+  // })
+  // }
+
+
+  drop(event: CdkDragDrop<Task[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
+  }
+
+// task-add component functions
+//
 }

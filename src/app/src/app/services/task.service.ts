@@ -14,50 +14,49 @@ import { Task } from 'src/app/task-interface';
 @Injectable({
   providedIn: 'root'
 })
-  /*public apiURL = "http://localhost:4300/tasks";*/
-  export class TaskService{
-    public taskURL = 'api/tasks/';
-    public dtaskURL = 'api/dtasks/';
+export class TaskService{
+  public taskURL = 'api/tasks/';
+  public dtaskURL = 'api/dtasks/';
 
   constructor(private http:HttpClient) { }
 
-  getTask(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.taskURL).pipe(retry(2),
-    catchError((error: HttpErrorResponse) => {
-      console.error(error);
-      return throwError(error);
-    })
-    );
-  }
+  // getTask(): Observable<Task[]> {
+  //   return this.http.get<Task[]>(this.taskURL).pipe(retry(2),
+  //   catchError((error: HttpErrorResponse) => {
+  //     console.error(error);
+  //     return throwError(error);
+  //   })
+  //   );
+  // }
 
-  getDTask(): Observable<Task[]> {
-    return this.http.get<Task[]>(this.dtaskURL).pipe(retry(2),
-    catchError((error: HttpErrorResponse) => {
-      console.error(error);
-      return throwError(error);
-    })
-    );
-  }
+  // getDTask(): Observable<Task[]> {
+  //   return this.http.get<Task[]>(this.dtaskURL).pipe(retry(2),
+  //   catchError((error: HttpErrorResponse) => {
+  //     console.error(error);
+  //     return throwError(error);
+  //   })
+  //   );
+  // }
 
-  deleteTask(task: Task) {
-    const URL = `${this.taskURL}/${task.id}`;
-    return this.http.delete<Task>(URL);
-  }
+  // deleteTask(task: Task) {
+  //   const URL = `${this.taskURL}/${task.id}`;
+  //   return this.http.delete<Task>(URL);
+  // }
 
-  deleteDTask(dtask: Task) {
-    const URL = `${this.dtaskURL}/${dtask.id}`;
-    return this.http.delete<Task>(URL);
-  }
+  // deleteDTask(dtask: Task) {
+  //   const URL = `${this.dtaskURL}/${dtask.id}`;
+  //   return this.http.delete<Task>(URL);
+  // }
 
-  addTask(task: Task): Observable<Task> {
-    return this.http.post<Task>(this.taskURL, task, httpOptions);
-  }
+  // addTask(task: Task): Observable<Task> {
+  //   return this.http.post<Task>(this.taskURL, task, httpOptions);
+  // }
 
-  addDTask(dtask: Task): Observable<Task> {
-    return this.http.post<Task>(this.dtaskURL, dtask, httpOptions);
-  }
+  // addDoneTask(dtask: Task): Observable<Task> {
+  //   return this.http.post<Task>(this.dtaskURL, dtask, httpOptions);
+  // }
 
-  updateTask(task : Task) {
-    return false;
-  }
+  // putTask(task : Task, id: number) {
+  //   return this.http.put<Task>(this.taskURL, task, httpOptions)
+  // }
 }

@@ -1,12 +1,12 @@
-<form class="bg-light col-md-12 w-100 fw-bold px-4" (ngSubmit)="submit()">
+<!-- <form class="bg-light col-md-12 w-100 fw-bold px-4" #myForm = "ngForm" (ngSubmit)="myForm.resetForm()">
   <div class="form-group col-md-10">
     <label for="inputTask">Task</label>
-    <input type="text" class="form-control" id="inputTask" name="task" [(ngModel)]="task" placeholder="My task ...">
+    <input type="text" class="form-control" id="inputTask" name="task" [(ngModel)]="task">
   </div>
   <div class="form-group row">
     <div class="form-group col-md-4 px-3">
-      <label for="inputDate">Date <small class="ps-2">Click on the calendar!</small></label>
-      <input type="text" name="date" onfocus="(this.type = 'date')" onblur="( this.type = 'text')" [(ngModel)]="date" class="form-control" id="inputDate" placeholder="Date">
+      <label for="inputDate">Date</label>
+      <input type="date" name="session-date" [(ngModel)]="date" class="form-control" id="session-date">
       <span> Selected date: {{date | date}}</span>
     </div>
     <div class="form-group col-md-3">
@@ -14,6 +14,9 @@
       <input type="time" name="time" [(ngModel)]="time" class="form-control" id="time">
     </div>
   </div><br>
-  <button type="submit" value="save Task" class="btn btn-primary ms-4 px-3 float-right end-0">Add</button><br><br>
+  <button *ngIf="isEdit === false" (click)="submit()" type="submit" value="save Task" class="btn btn-primary ms-4 px-3 float-right end-0">Add</button>
+  <button *ngIf="isEdit === true" (click)="update()" value="update task" class="btn btn-light px-2 ms-4 border-dark">Update</button>
 </form>
+  <br><br>
 <br>
+ -->

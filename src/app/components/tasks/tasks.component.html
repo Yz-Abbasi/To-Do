@@ -1,23 +1,90 @@
+<!-- Start of Add Form -->
 <div class="h-100 col-md-9 ms-sm-auto col-lg-10 px-md-0">
-    <app-task-add (onAddTask)="addTask($event)"></app-task-add>
+  <form class="bg-light col-md-12 w-100 fw-bold px-4" [formGroup]="todoForm">
+    <div class="form-group col-md-10">
+      <label for="inputTask">Task</label>
+      <input type="text" formControlName="task" class="form-control" id="inputTask" name="task">
+    </div>
+    <div class="form-group row col-md-8">
+      <div class="form-group col-md-4">
+        <label>Date</label><br>
+        <input class="form-control pt-2 border" matInput formControlName="date" [matDatepicker]="picker" (click)="picker.open()">
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+      <div class="form-group col-md-3">
+
+      </div>
+    </div><br>
+    <button (click)="addTask()" *ngIf="!isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-primary ms-4 mb-1 px-3 float-right end-0">Save</button>
+    <button (click)="updateTask()" *ngIf="isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-outline-primary ms-4 mb-1 px-3 float-right end-0">Update</button>
+  </form>
+    <br><br>
+  <br>
 </div>
-<div class="col-md-4 col-sm-4 px-md-4 ms-7 d-flex flex-column">
-  <div class="row">
-    <ul class="list-group list-group ms-5">
+<!-- End of Add Form -->
+<div class="container-fluid">
+<div class="col-md-4 col-sm-4 px-md-4 ms-7">
+  <div class="span6">
+    <div cdkDropListGroup>
+      <div class="example-container position-absolute w-40 pb-3">
+        <h4>To do</h4>
+        <div
+          cdkDropList
+          [cdkDropListData]="tasks"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box " *ngFor="let item of tasks; let i = index" cdkDrag>
+            <div class="mw-30">{{item.task}}</div>
+            <p class="mt-3 ms-1">{{item.date | date}}</p>
+            <p class="mt-3 ms-1">{{item.time}}</p>
+            <div class="w-3 h-3 justify-content">
+              <button mat-icon-button class="border-0 bg-transparent me-0 pe-0" (click)="onEdit(item, i)"><mat-icon class="bg-transparent" [ngStyle]="{'color':'cornflowerblue'}">edit</mat-icon></button>
+              <button mat-icon-button class="border-0 bg-transparent ms-0 ps-0" (click)="deleteTask(i)"><mat-icon class="bg-transparent" [ngStyle]="{'color': 'red'}">delete</mat-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container position-absolute w-40 end-0 top-60 pb-3">
+        <h4>Done</h4>
+
+        <div
+          cdkDropList
+          [cdkDropListData]="done"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of done; let i=index" cdkDrag>
+            <div>{{item.task}}</div>
+            <p class="mt-3 ms-1">{{item.date | date}}</p>
+            <p class="mt-3 ms-1">{{item.time}}</p>
+          <div class="w-3 h-3">
+            <button mat-icon-button class="border-0 bg-transparent me-0 pe-0" (click)="deleteDone(i)"><mat-icon class="bg-transparent" [ngStyle]="{'color': 'red'}">delete</mat-icon></button>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!--
+<app-task-add (onAddTask)="addTask($event)" id="form" [taskToUpdate]="uTask" (onEditTask)="setUpdatedTask($event)"></app-task-add> -->
+    <!-- <ul class="list-group list-group ms-5 mb-4">
       <li class="list-group-item list-group-item-primary pb-1">
-        Tasks <span *ngIf="tasks.length > 0">({{tasks.length}})</span>
+        Tasks <span *ngIf= ></span>
       </li>
       <li>
-        <app-task-functions *ngFor="let task of tasks" [task]="task" (deleteATask)="deleteTask(task)" (completeATAsk)="pushTask(task)"></app-task-functions>
+        <app-task-functions ></app-task-functions>
       </li>
     </ul>
   </div>
-  <ul class="list-group list-group position-absolute top-20 end-0 me-5 w-40">
+  <ul class="list-group list-group position-absolute top-20 end-0 me-5 w-40 mb-5">
     <li class="list-group-item list-group-item-primary pb-1">
-      Fulfilled <span *ngIf="dtasks.length > 0">({{dtasks.length}})</span>
+      Fulfilled <span *ngIf=></span>
     </li>
-    <li>
-      <app-fulfilled *ngFor="let dtask of dtasks" [dtask]="dtask" (deleteATask)="deleteDTask(dtask)"></app-fulfilled>
+    <li class="mb-4">
+      <app-fulfilled></app-fulfilled>
     </li>
-  </ul>
-</div>
+  </ul> -->

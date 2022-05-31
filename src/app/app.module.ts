@@ -7,7 +7,12 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { AngularEmojisModule} from 'angular-emojis';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatIconModule} from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTimepickerModule } from 'mat-timepicker';
+
 //Services decalrations go here
 import { DataService } from './src/app/services/data.service';
 
@@ -44,9 +49,13 @@ import { FulfilledComponent } from './components/tasks/fulfilled/fulfilled.compo
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    AngularEmojisModule,
     FormsModule,
     ReactiveFormsModule,
+    DragDropModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTimepickerModule,
     BrowserAnimationsModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
 
