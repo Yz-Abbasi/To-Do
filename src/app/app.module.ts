@@ -12,6 +12,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTimepickerModule } from 'mat-timepicker';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 //Services decalrations go here
 import { DataService } from './src/app/services/data.service';
@@ -56,6 +57,7 @@ import { FulfilledComponent } from './components/tasks/fulfilled/fulfilled.compo
     MatDatepickerModule,
     MatNativeDateModule,
     MatTimepickerModule,
+    MatProgressSpinnerModule,
     BrowserAnimationsModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
 

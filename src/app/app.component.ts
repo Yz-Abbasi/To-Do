@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet, Router,Event as RouterEvent ,NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
+import { filter, map, Observable, of } from 'rxjs';
 
 
 @Component({
@@ -9,5 +10,32 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'To Do List';
-  dev: string = " Yazdan Abbasi";
+
+  loading: boolean = true;
+  constructor( private router: Router) {
+    this.router.events.subscribe((e: RouterEvent) => {
+      this.navigationInterceptor(e);
+    })
+  }
+
+  navigationInterceptor(event : RouterEvent){
+    if (event instanceof NavigationStart){
+      this.loading = true;
+    }
+    else if (event instanceof NavigationEnd){
+      this.loading = false;
+    }
+    else if (event instanceof NavigationCancel){
+      this.loading = false;
+    }
+    else if (event instanceof NavigationError){
+      this.loading = false;
+    }
+    else {
+      this.loading = false;
+    }
+  }
+  ngOnInit () {
+  }
+
 }

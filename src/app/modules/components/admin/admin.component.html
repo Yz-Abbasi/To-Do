@@ -1,4 +1,7 @@
 <div>
-<app-top-bar></app-top-bar>
-<router-outlet></router-outlet>
+    <app-top-bar></app-top-bar>
+    <router-outlet></router-outlet>
+    <div *ngIf="loading===true">
+        <mat-spinner [mode]="'indeterminate'"></mat-spinner>
+    </div>
 </div>

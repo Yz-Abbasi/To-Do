@@ -12,7 +12,8 @@
         <mat-datepicker #picker></mat-datepicker>
       </div>
       <div class="form-group col-md-3">
-
+        <label for="time">Time</label>
+        <input type="time" formControlName="time" onclick="showPicker()" class="form-control pt-2 border">
       </div>
     </div><br>
     <button (click)="addTask()" *ngIf="!isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-primary ms-4 mb-1 px-3 float-right end-0">Save</button>
