@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { of, throwError } from 'rxjs';
 import { UserService } from '../src/app/services/user.service';
 
 @Component({
@@ -9,23 +10,19 @@ import { UserService } from '../src/app/services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm = new FormGroup({
-  username: new FormControl,
-  password: new FormControl,
-  });
-  constructor(private authorization: UserService, private router: Router) { }
+  loginForm = new FormGroup({username: new FormControl, password: new FormControl});
+  spin: boolean = false;
+
+  constructor(private router: Router, private authorization: UserService) { }
 
   ngOnInit(): void {
-    if(this.authorization.isLoggedIn()){
-      this.router.navigate(['admin']);
-    }
   }
 
   onSubmit(): void {
     if (this.loginForm.valid) {
       this.authorization.login(this.loginForm.value).subscribe(
         (result) => {
-          console.log(result);
+          this.spin = true
           this.router.navigate(['/admin']);
         },
         (err: Error) => {
@@ -34,5 +31,4 @@ export class LoginComponent implements OnInit {
       );
     }
   }
-
 }

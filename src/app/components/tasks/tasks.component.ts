@@ -5,6 +5,7 @@ import { MatNativeDateModule, ThemePalette } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { TaskService } from 'src/app/src/app/services/task.service';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-tasks',
@@ -16,6 +17,7 @@ export class TasksComponent implements OnInit {
 tasks: Task[] = [];
 done: Task[] =[];
 
+
 updateId!: number;
 isEditEnabled: boolean = false;
 
@@ -24,19 +26,22 @@ isEditEnabled: boolean = false;
 // uTask!: Task;
 todoForm !: FormGroup;
 
-  constructor(private formBuilder : FormBuilder) { }
+  constructor(private formBuilder : FormBuilder) {
+   }
 
   ngOnInit(): void {
     this.todoForm = this.formBuilder.group({
       task : ['', Validators.required],
       date : ['', Validators.required],
       time : ['', Validators.required]
-    })
+    });
+
   }
   // old functions
 
   deleteTask(index: number) {
     this.tasks.splice(index, 1);
+    this.isEditEnabled = false;
   }
 
   deleteDone(index: number) {
@@ -50,6 +55,7 @@ todoForm !: FormGroup;
       time: this.todoForm.value.time,
       done: false
     });
+    this.todoForm.reset();
   }
 
   onEdit(item: Task, i: number){

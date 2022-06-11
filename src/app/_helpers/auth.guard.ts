@@ -6,9 +6,8 @@ import { UserService } from '../src/app/services/user.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AuthGuard {
   constructor(private authorization: UserService, private router: Router) {}
-
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): 
@@ -19,5 +18,4 @@ export class AuthGuard implements CanActivate {
     }
     return this.authorization.isLoggedIn();
   }
-  
 }

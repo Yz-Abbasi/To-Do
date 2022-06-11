@@ -12,21 +12,13 @@ const HTTP_OPTIONS = {
   providedIn: 'root'
 })
 export class UserService {
+  authorize!: boolean;
 
   constructor(public http:HttpClient, private router: Router) { }
-
 // Login service starts from here, modify later for compatibility with DB
 
-setToken(token: string): void {
-  localStorage.setItem('token', token);
-}
-
-getToken(): string | null {
-  return localStorage.getItem('token');
-}
-
 isLoggedIn() {
-  return this.getToken() !== null;
+  return localStorage.getItem('user') !== null;
 }
 
 logout() {
@@ -36,7 +28,7 @@ logout() {
 
 login({ username, password }: any): Observable<any> {
   if (username === 'admin' && password === 'admin123') {
-    this.setToken('abcdefghijklmnopqrstuvwxyz');
+    localStorage.setItem("user", "admin");
     return of({ name: 'Yazdan Abbasi', username: 'admin' });
   }
   return throwError(new Error('Check your Username and Password'));

@@ -3,7 +3,7 @@
   <form class="bg-light col-md-12 w-100 fw-bold px-4" [formGroup]="todoForm">
     <div class="form-group col-md-10">
       <label for="inputTask">Task</label>
-      <input type="text" formControlName="task" class="form-control" id="inputTask" name="task">
+      <input #focusForm type="text" formControlName="task" class="form-control" id="text" name="task">
     </div>
     <div class="form-group row col-md-8">
       <div class="form-group col-md-4">
@@ -39,7 +39,7 @@
             <p class="mt-3 ms-1">{{item.date | date}}</p>
             <p class="mt-3 ms-1">{{item.time}}</p>
             <div class="w-3 h-3 justify-content">
-              <button mat-icon-button class="border-0 bg-transparent me-0 pe-0" (click)="onEdit(item, i)"><mat-icon class="bg-transparent" [ngStyle]="{'color':'cornflowerblue'}">edit</mat-icon></button>
+              <button mat-icon-button id="btn" class="border-0 bg-transparent me-0 pe-0" (click)="onEdit(item, i)"><mat-icon class="bg-transparent" [ngStyle]="{'color':'cornflowerblue'}">edit</mat-icon></button>
               <button mat-icon-button class="border-0 bg-transparent ms-0 ps-0" (click)="deleteTask(i)"><mat-icon class="bg-transparent" [ngStyle]="{'color': 'red'}">delete</mat-icon></button>
             </div>
           </div>

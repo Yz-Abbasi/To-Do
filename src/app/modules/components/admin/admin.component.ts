@@ -26,7 +26,7 @@ constructor( private router: Router) {
       this.loading = true;
     }
     else if (event instanceof NavigationEnd){
-      this.loading = false;
+      this.loading = true;
     }
     else if (event instanceof NavigationCancel){
       this.loading = false;
@@ -37,5 +37,8 @@ constructor( private router: Router) {
     else {
       this.loading = true;
     }
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000)
   }
 }
