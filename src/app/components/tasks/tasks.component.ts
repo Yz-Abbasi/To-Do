@@ -46,6 +46,7 @@ todoForm !: FormGroup;
 
   deleteDone(index: number) {
     this.done.splice(index, 1);
+    this.isEditEnabled = false;
   }
 
   addTask(){

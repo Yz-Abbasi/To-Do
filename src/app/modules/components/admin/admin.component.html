@@ -1,7 +1,7 @@
 <div>
     <app-top-bar></app-top-bar>
     <router-outlet></router-outlet>
-    <div *ngIf="loading===true">
+    <div class="bg-light position-absolute top-0 bottom-0 end-0 start-0" *ngIf="loading===true">
         <mat-spinner [mode]="'indeterminate'"></mat-spinner>
     </div>
 </div>

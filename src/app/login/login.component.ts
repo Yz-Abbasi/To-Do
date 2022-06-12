@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { of, throwError } from 'rxjs';
+import { delay, of, throwError } from 'rxjs';
 import { UserService } from '../src/app/services/user.service';
 
 @Component({
@@ -10,6 +10,8 @@ import { UserService } from '../src/app/services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  delay: number = 5000;
+
   loginForm = new FormGroup({username: new FormControl, password: new FormControl});
   spin: boolean = false;
 
@@ -18,12 +20,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sleep(miliSeconds: number){
+    setTimeout(() => this.spin, miliSeconds)
+  }
+
   onSubmit(): void {
     if (this.loginForm.valid) {
+      this.spin = true;
       this.authorization.login(this.loginForm.value).subscribe(
         (result) => {
-          this.spin = true
-          this.router.navigate(['/admin']);
+          setTimeout(() => this.router.navigate(['/admin']), 4000)
         },
         (err: Error) => {
           alert(err.message);
