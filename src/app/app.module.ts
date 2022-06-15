@@ -23,10 +23,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskFunctionsComponent } from './components/tasks/task-functions/task-functions.component';
-import { TaskAddComponent } from './components/task-add/task-add.component';
-import { FooterComponent } from './src/app/components/footer/footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginContainerComponent } from './login-container/login-container.component';
 import { AdminComponent } from './modules/components/admin/admin.component';
 import { FulfilledComponent } from './components/tasks/fulfilled/fulfilled.component';
@@ -37,10 +34,7 @@ import { FulfilledComponent } from './components/tasks/fulfilled/fulfilled.compo
     TopBarComponent,
     TasksComponent,
     TaskFunctionsComponent,
-    TaskAddComponent,
-    FooterComponent,
     LoginComponent,
-    NotfoundComponent,
     LoginContainerComponent,
     AdminComponent,
     FulfilledComponent,
@@ -60,9 +54,6 @@ import { FulfilledComponent } from './components/tasks/fulfilled/fulfilled.compo
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
-
-    /*RouterModule.forRoot([
-    ])*/
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,31 +1,34 @@
 <!-- Start of Add Form -->
-<div class="d-flex flex-column">
-<div class="h-100 col-md-9 ms-sm-auto col-lg-10 px-md-0">
-  <form class="bg-light col-md-12 w-100 fw-bold px-4" [formGroup]="todoForm">
-    <div class="form-group col-md-10">
-      <label for="inputTask">Task</label>
-      <input #focusForm type="text" formControlName="task" class="form-control" id="text" name="task">
+<div class="container-fluid p-0">
+  <div class="d-flex flex-column">
+    <div class="h-100 col-md-9 ms-md-auto col-lg-10 px-md-0">
+      <form class="bg-light col-md-12 w-100 fw-bold px-4" [formGroup]="todoForm">
+        <div class="form-group col-md-10">
+          <label for="inputTask">Task</label>
+          <input #focusForm type="text" formControlName="task" class="form-control" id="text" name="task">
+        </div>
+        <div class="form-group row col-md-8">
+          <div class="form-group col-md-4">
+            <label>Date</label><br>
+            <input class="form-control pt-2 border" matInput formControlName="date" [matDatepicker]="picker" (click)="picker.open()">
+            <mat-datepicker #picker></mat-datepicker>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="time">Time</label>
+            <input type="time" formControlName="time" onclick="showPicker()" class="form-control pt-2 border">
+          </div>
+        </div><br>
+        <button (click)="addTask()" *ngIf="!isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-primary ms-4 mb-1 px-3 float-right end-0">Save</button>
+        <button (click)="updateTask()" *ngIf="isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-outline-primary ms-4 mb-1 px-3 float-right end-0">Update</button>
+      </form>
+        <br><br>
+      <br>
     </div>
-    <div class="form-group row col-md-8">
-      <div class="form-group col-md-4">
-        <label>Date</label><br>
-        <input class="form-control pt-2 border" matInput formControlName="date" [matDatepicker]="picker" (click)="picker.open()">
-        <mat-datepicker #picker></mat-datepicker>
-      </div>
-      <div class="form-group col-md-3">
-        <label for="time">Time</label>
-        <input type="time" formControlName="time" onclick="showPicker()" class="form-control pt-2 border">
-      </div>
-    </div><br>
-    <button (click)="addTask()" *ngIf="!isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-primary ms-4 mb-1 px-3 float-right end-0">Save</button>
-    <button (click)="updateTask()" *ngIf="isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-outline-primary ms-4 mb-1 px-3 float-right end-0">Update</button>
-  </form>
-    <br><br>
-  <br>
+  </div>
 </div>
 <!-- End of Add Form -->
-<div class="container-fluid">
-<div class="col-md-9 ms-sm-auto col-sm-9 px-md-2 ms-7">
+<div class="container-fluid p-0">
+<div class="col-md-9 ms-md-auto px-md-2 ms-7">
   <div class="span6">
     <div cdkDropListGroup>
       <div class="example-container position-absolute w-40 pb-3">
@@ -69,24 +72,3 @@
     </div>
 </div>
 </div>
-
-
-<!--
-<app-task-add (onAddTask)="addTask($event)" id="form" [taskToUpdate]="uTask" (onEditTask)="setUpdatedTask($event)"></app-task-add> -->
-    <!-- <ul class="list-group list-group ms-5 mb-4">
-      <li class="list-group-item list-group-item-primary pb-1">
-        Tasks <span *ngIf= ></span>
-      </li>
-      <li>
-        <app-task-functions ></app-task-functions>
-      </li>
-    </ul>
-  </div>
-  <ul class="list-group list-group position-absolute top-20 end-0 me-5 w-40 mb-5">
-    <li class="list-group-item list-group-item-primary pb-1">
-      Fulfilled <span *ngIf=></span>
-    </li>
-    <li class="mb-4">
-      <app-fulfilled></app-fulfilled>
-    </li>
-  </ul> -->

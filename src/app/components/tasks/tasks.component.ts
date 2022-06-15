@@ -77,25 +77,6 @@ todoForm !: FormGroup;
     this.isEditEnabled = false;
   }
 
-  // pushTask(task: Task){
-  //   this.taskService.addDoneTask(task).subscribe((task) => this.dtasks.push(task));
-  //   this.deleteTask(task);
-  // }
-
-  // getTaskToUpdate(_task: Task) {
-  //   this.uTask = _task;
-  // }
-
-  //   this.taskService.putTask(task, task.id as number).subscribe({next:(res)=>{
-  //     alert("Task updated successfully.");
-  //   },
-  //   error:() => {
-  //     alert("Couldn't update the task.");
-  //   }
-  // })
-  // }
-
-
   drop(event: CdkDragDrop<Task[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -108,7 +89,4 @@ todoForm !: FormGroup;
       );
     }
   }
-
-// task-add component functions
-//
 }

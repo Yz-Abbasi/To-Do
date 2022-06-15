@@ -1,7 +1,7 @@
 
-export interface Task {
-    task: string;
-    date: string;
-    time: string;
-    done: boolean;
+export class Task {
+    task!: string;
+    date!: string;
+    time!: string;
+    done!: boolean;
 }
