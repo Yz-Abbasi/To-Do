@@ -1,0 +1,74 @@
+<!-- Start of Add Form -->
+<div class="container-fluid p-0">
+  <div class="d-flex flex-column">
+    <div class="h-100 col-md-9 ms-md-auto col-lg-10 px-md-0">
+      <form class="bg-light col-md-12 w-100 fw-bold px-4" [formGroup]="todoForm">
+        <div class="form-group col-md-10">
+          <label for="inputTask">Task</label>
+          <input #focusForm type="text" formControlName="task" class="form-control" id="text" name="task">
+        </div>
+        <div class="form-group row col-md-8">
+          <div class="form-group col-md-4">
+            <label>Date</label><br>
+            <input class="form-control pt-2 border" matInput formControlName="date" [matDatepicker]="picker" (click)="picker.open()">
+            <mat-datepicker #picker></mat-datepicker>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="time">Time</label>
+            <input type="time" formControlName="time" onclick="showPicker()" class="form-control pt-2 border">
+          </div>
+        </div><br>
+        <button (click)="addTask()" *ngIf="!isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-primary ms-4 mb-1 px-3 float-right end-0">Save</button>
+        <button (click)="updateTask()" *ngIf="isEditEnabled" [disabled]="todoForm.invalid" type="submit" class="btn btn-outline-primary ms-4 mb-1 px-3 float-right end-0">Update</button>
+      </form>
+        <br><br>
+      <br>
+    </div>
+  </div>
+</div>
+<!-- End of Add Form -->
+<div class="container-fluid p-0">
+<div class="col-md-9 ms-md-auto px-md-2 ms-7">
+  <div class="span6">
+    <div cdkDropListGroup>
+      <div class="example-container position-absolute w-40 pb-3">
+        <h4 class="color">To do</h4>
+        <div
+          cdkDropList
+          [cdkDropListData]="tasks"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box " *ngFor="let item of tasks; let i = index" cdkDrag>
+            <div class="mw-30">{{item.task}}</div>
+            <p class="mt-3 ms-1">{{item.date | date}}</p>
+            <p class="mt-3 ms-1">{{item.time}}</p>
+            <div class="w-3 h-3 justify-content">
+              <button mat-icon-button id="btn" class="border-0 bg-transparent me-0 pe-0" (click)="onEdit(item, i)"><mat-icon class="bg-transparent" [ngStyle]="{'color':'cornflowerblue'}">edit</mat-icon></button>
+              <button mat-icon-button class="border-0 bg-transparent ms-0 ps-0" (click)="deleteTask(i)"><mat-icon class="bg-transparent" [ngStyle]="{'color': 'red'}">delete</mat-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container position-absolute w-40 end-0 top-60 pb-3 me-5">
+        <h4 class="color">Done</h4>
+
+        <div
+          cdkDropList
+          [cdkDropListData]="done"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of done; let i=index" cdkDrag>
+            <div class="finished">{{item.task}}</div>
+            <p class="mt-3 ms-1 finished">{{item.date | date}}</p>
+            <p class="mt-3 ms-1 finished">{{item.time}}</p>
+          <div class="w-3 h-3">
+            <button mat-icon-button class="border-0 bg-transparent me-0 pe-0" (click)="deleteDone(i)"><mat-icon class="bg-transparent" [ngStyle]="{'color': 'red'}">delete</mat-icon></button>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+</div>

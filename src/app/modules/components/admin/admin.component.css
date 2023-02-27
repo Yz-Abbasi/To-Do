@@ -1,0 +1,27 @@
+mat-spinner {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.kontainer {
+    position: relative;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+}
+
+app-footer {
+    z-index: 1;
+    flex-flow: column;
+    justify-self: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 10rem;
+    max-height: 100px;
+}

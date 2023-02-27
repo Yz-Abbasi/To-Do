@@ -1,0 +1,12 @@
+mat-spinner {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.w-100 {
+    background-image: url(../assets/mini-profile-bg-01.jpg);
+    background-size: cover;
+}

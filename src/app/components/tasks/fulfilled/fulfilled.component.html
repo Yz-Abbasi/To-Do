@@ -1,0 +1,8 @@
+<li class="list-group-item d-flex text-break">
+  <div class="fw-bold pe-2 mw-30">{{ _dtask }}</div>
+  <p class="ps-2">{{ _ddate | date }}</p>
+  <p class="text-bold ps-2 pe-2">Time: <span>{{ _dtime }}</span></p>
+  <div class="box d-grid position-absolute top-0 end-0">
+    <fa-icon class="pe-1 psuedo" [icon]="faTimes" [ngStyle]="{'color': 'red'}" (click)="(deleteTask(dtask))" title="Delete"></fa-icon>
+  </div>
+</li>

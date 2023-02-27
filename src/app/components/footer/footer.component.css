@@ -1,0 +1,64 @@
+footer {
+    min-width: 0;
+    max-width: 100%;
+    z-index: 1;
+    display: grid;
+    background-color: rgb(64, 73, 70);
+    color: azure;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, minmax(50px, 1fr));
+    align-items: center;
+    margin-top: auto;
+}
+
+footer > * {
+    margin-left: 10px;
+}
+
+p {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    border-bottom: 1px solid blanchedalmond;
+}
+
+.features {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+}
+
+.more {
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+}
+
+a {
+    color: beige;
+    text-decoration: none;
+}
+
+.contact {
+    grid-column: 4 / 5;
+    grid-row: 1 / -1;
+}
+
+@media (max-width: 493px) {
+    p {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+
+    .features {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .more {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+    
+    .contact {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+}

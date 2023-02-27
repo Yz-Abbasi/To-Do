@@ -1,0 +1,40 @@
+<body class="d-flex align-items-center py-5 bg-light text-center vh-100">
+  
+  <main class="form-signin w-100 p-3 m-auto mt-5">
+  <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <img class="mb-4" src="../../assets/coffee-edit2.jpg" alt="Yup, it's bootstrap logo" title="Yup, it's bootstrap logo" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" name="username" id="floatingInput" placeholder="User Name" formControlName="username">
+      <label for="floatingInput">User Name</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control mb-2" name="password" id="floatingPassword" placeholder="Password" formControlName="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary d-flex justify-content-center" type="submit" ><span *ngIf="spin === true" class="spinner-border spinner-border-sm mt-2" role="status" aria-hidden="true"></span><span>Sign in</span></button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+  </main>
+
+</body>
+
+<!-- Required codes and form
+
+  <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <input type="text" id="username" name="username" class="login__input" placeholder="User name" formControlName="username">
+
+      <input type="password" id="password" name="password" class="login__input" placeholder="Password" formControlName="password">
+
+  <input type="submit" class="button login__submit" value="login">
+
+  <a routerLink="/signup" class="button signup">Sign Up</a>
+  -->

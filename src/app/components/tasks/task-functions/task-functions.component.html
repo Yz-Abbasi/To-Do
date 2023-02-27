@@ -1,0 +1,13 @@
+  <li class="list-group-item d-flex text-break">
+        <div class="fw-bold pe-2 mw-20 w-20">{{ task.task }}</div>
+        <p class="ps-2">{{ task.date | date }}</p>
+        <p class="text-bold ps-2 pe-2 mw-20">Time: <span>{{ task.time}}</span></p>
+        <div class="box d-grid position-absolute top-0 end-0">
+          <button id="b1" class="btn h-20 border-0 ms-2" (click)="editTask(task)">
+            <fa-icon [icon]="faPencil" [ngStyle]="{'color' : 'darkblue'}" ></fa-icon>
+          </button>
+          <button class="btn w-5 h-20 border-0 pe-1" (click)="(completeTask(task))" [disabled]="clickCount > completedTaskCount" title="Complete">
+            <fa-icon [icon]="faCheck" [ngStyle]="{'color' : 'lightgreen'}"></fa-icon>
+          </button>
+        </div>
+  </li>

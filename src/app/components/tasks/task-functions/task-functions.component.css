@@ -1,0 +1,24 @@
+.btn:focus {
+  cursor:pointer;
+  border: 0px;
+}
+
+.d-grid {
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  padding-right: 0.5vw;
+  padding-bottom: 0px;
+  padding-left: 1px;
+}
+#b1 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#b1:active {
+  border: 0;
+}
